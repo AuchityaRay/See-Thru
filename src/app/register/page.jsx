@@ -1,55 +1,166 @@
-import React from 'react'
-import Input from 'postcss/lib/input'
-const page = () => {
+"use client";
+
+import * as React from "react";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import Modal from "@mui/material/Modal";
+import { alpha, styled } from "@mui/material/styles";
+import InputBase from "@mui/material/InputBase";
+import InputLabel from "@mui/material/InputLabel";
+import FormControl from "@mui/material/FormControl";
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
+
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  bgcolor: "background.paper",
+  borderRadius: 10,
+  boxShadow: 24,
+  p: 4,
+};
+
+
+
+const BootstrapInput = styled(InputBase)(({ theme }) => ({
+  "label + &": {
+    marginTop: theme.spacing(3),
+  },
+  "& .MuiInputBase-input": {
+    borderRadius: 4,
+    position: "relative",
+    border: "1px solid",
+    borderColor: "#0E713C",
+    borderRadius: 8,
+    fontSize: 16,
+    padding: "10px 12px",
+    transition: theme.transitions.create([
+      "border-color",
+      "background-color",
+      "box-shadow",
+    ]),
+    // Use the system font instead of the default Roboto font.
+
+    "&:focus": {
+      boxShadow: `${alpha(theme.palette.primary.main, 0.25)} 0 0 0 0.2rem`,
+      borderColor: theme.palette.primary.main,
+    },
+    
+  },
+}));
+
+export default function BasicModal() {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   return (
     <div>
-      
-
-<button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
-  Toggle modal
-</button>
-
-
-<div id="authentication-modal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
-    <div class="relative w-full max-w-md max-h-full">
-     
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-            <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-hide="authentication-modal">
-                <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                <span class="sr-only">Close modal</span>
-            </button>
-            <div class="px-6 py-6 lg:px-8">
-                <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Create an account</h3>
-                <form class="space-y-6" action="#">
-                    <div>
-                        <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
-                        <Input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="name@company.com" required />
-                    </div>
-                    <div>
-                        <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your password</label>
-                        <Input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required />
-                    </div>
-                    <div class="flex justify-between">
-                        <div class="flex items-start">
-                            <div class="flex items-center h-5">
-                                <Input id="remember" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required />
-                            </div>
-                            <label for="remember" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>
-                        </div>
-                        <a href="#" class="text-sm text-blue-700 hover:underline dark:text-blue-500">Lost Password?</a>
-                    </div>
-                    <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login to your account</button>
-                    <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
-                        Not registered? <a href="#" class="text-blue-700 hover:underline dark:text-blue-500">Create account</a>
-                    </div>
-                </form>
-            </div>
-        </div>
+      <Button className="my-60" onClick={handleOpen}>
+        Open modal
+      </Button>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style} className='sm:w-[912] w-3/5 my-5'>
+          <Typography
+            id="modal-modal-title"
+            className="text-center font-nunito text-[25px] mb-6 font-semibold"
+            variant="h6"
+            component="h2"
+          >
+            Create your Account
+          </Typography>
+          <hr />
+          <Typography
+            id="modal-modal-description"
+            className="text-center font-inter sm:text-[14px] text-[10px] mb-6 font-normal italic"
+            sx={{ my: 2 }}
+          >
+            Your personal information will not be displayed on SeeThru. All
+            interactions are completely anonymous.
+          </Typography>
+          <div className="grid  place-content-center">
+            <FormControl variant="standard" className="justify-center my-2">
+              <InputLabel
+                shrink
+                htmlFor="Work Email"
+                className="font-medium text-[16] font-[inter] text-black"
+              >
+                Work Email
+              </InputLabel>
+              <BootstrapInput id="Work Email" />
+            </FormControl>
+            <FormControl variant="standard" className="justify-center my-2 ">
+              <InputLabel
+                shrink
+                htmlFor="First Name"
+                className="font-medium text-[16] font-[inter] text-black"
+              >
+                First Name
+              </InputLabel>
+              <BootstrapInput id="First Name" />
+            </FormControl>
+            <FormControl variant="standard" className="justify-center my-2">
+              <InputLabel
+                shrink
+                htmlFor="Last Name"
+                className="font-medium text-[16] font-[inter] text-black"
+              >
+                Last Name
+              </InputLabel>
+              <BootstrapInput id="Last Name" />
+            </FormControl>
+            <FormControl variant="standard" className="justify-center my-2">
+              <InputLabel
+                shrink
+                htmlFor="phonenumber"
+                className="font-medium text-[16] font-[inter] text-black"
+              >
+               Phone Number
+              </InputLabel>
+              <BootstrapInput id="phonenumber" />
+            </FormControl>
+            <FormControl variant="standard" className="justify-center my-2">
+              <InputLabel
+                shrink
+                htmlFor="Linkedin"
+                className="font-medium text-[16] font-[inter] text-black"
+              >
+                LinkedIn URL
+              </InputLabel>
+              <BootstrapInput id="Linkedin" />
+            </FormControl>
+            <FormControl variant="standard" className="justify-center my-2">
+              <InputLabel
+                shrink
+                htmlFor="create_password"
+                className="font-medium text-[16] font-[inter] text-black"
+              >
+                Create Password
+              </InputLabel>
+              <BootstrapInput id="create_password" />
+            </FormControl>
+            <FormControlLabel control={<Checkbox defaultChecked />}   className='sm:text-[14px] text-[10px] mb-6 font-normal italic' label="I acknowledge that the information I provided is accurate"/>
+           
+            <Typography
+            id="modal-modal-description"
+            className="text-center font-inter sm:text-[14px] text-[10px] mb-6 font-normal italic"
+            sx={{ my: 2 }}>
+           By clicking below and creating an account, I agree to <span className='text-[#0E713C]'>SeeThru</span> Terms of Service and Privacy Policy
+          </Typography>
+            <Button  className='bg-[#0E713C] capitalize rounded-lg text-white opacity-75 h-12 hover:bg-[#086131]'>
+              Create Account
+            </Button>
+          </div>
+        </Box>
+      </Modal>
     </div>
-</div> 
-
-    </div>
-  )
+  );
 }
-
-export default page

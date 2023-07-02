@@ -19,7 +19,7 @@
 body {
   color: #000;
   font-family: poppins;
-
+  overflow-y: scroll !important;
 }
 .banner_bg
 {
