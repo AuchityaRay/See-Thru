@@ -68,7 +68,7 @@ const Footer = () => {
                 </ul>
               </div>
               <div className="mx-10">
-                <h2 className="mb-8 text-[24px] font-medium text-white">
+                <h2 className="mb-8 sm:text-[24px] text-[20px] font-medium text-white">
                   Follow Us
                 </h2>
                 <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
@@ -132,7 +132,7 @@ const Footer = () => {
        
           <div className="sm:flex sm:items-center sm:justify-center  sm:flex-row flex-col ">
             
-            <div className="basis-4/4 sm:mb-0 mb-[-50px] ">
+            <div className="basis-4/4 sm:mb-0 mb-[-50px] sm:ml-0 ml-2">
             <span className="text-[16px] text-gray-500 sm:text-center   dark:text-gray-400">
               <Link href="" className="hover:underline text-[#D1D0D0] font-nunito">
                 Copyright

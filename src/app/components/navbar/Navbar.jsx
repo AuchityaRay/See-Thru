@@ -104,27 +104,36 @@ const Navbar = () => {
           </div>
           <div className={`flex-l justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${ navbar ? 'p-12 md:p-0 block' : 'hidden'}`}> 
           <ul className="h-screen md:h-auto items-center justify-center md:flex">
-            <li className=" text-xl text-black py-2 md:px-6 text-base font-medium leading-5 text-center border-b-2 md:border-b-0 hover:text-green-950 md:hover:text-green-950">
+            <li className=" text-xl text-black py-5 md:px-6 text-base font-medium leading-5 text-center border-b-2 md:border-b-0 hover:text-green-950 md:hover:text-green-950">
            <Link href="/" onClick={() => setNavbar(!navbar)}>
             Home
            </Link>
             </li>
-            <li className=" text-xl text-black py-2 md:px-6 text-base font-medium leading-5 text-center border-b-2 md:border-b-0 hover:text-green-950 md:hover:text-green-950">
+            <li className=" text-xl text-black py-5 md:px-6 text-base font-medium leading-5 text-center border-b-2 md:border-b-0 hover:text-green-950 md:hover:text-green-950">
             <Link href="/" onClick={() => setNavbar(!navbar)}>
             About
            </Link>
             </li>
-            <li className="text-xl text-black py-2 md:px-6 text-base font-medium leading-5 text-center border-b-2 md:border-b-0 hover:text-green-950 md:hover:text-green-950">
+            <li className="text-xl text-black py-6 md:px-6 text-base font-medium leading-5 text-center  hover:text-green-950 md:hover:text-green-950">
             <Link href="" onClick={() => setNavbar(!navbar)}>
             <button className={styles.btn_register}  onClick={handleOpen}>Login/Signup</button>
            </Link>
             </li>
-            <li className="py-2 md:px-6" >
+            <li className="text-xl text-black py-5 md:px-6 text-base font-medium leading-5 text-center  hover:text-green-950 md:hover:text-green-950">
             <Link href="" onClick={() => setNavbar(!navbar)}>
             <button className={styles.btn_google}  onClick={handleOpen}>Job Seeker</button>
            </Link>
             </li>
-           
+            {/* <li className="py-2 md:px-6" >
+            <Link href="" onClick={() => setNavbar(!navbar)}>
+            <button className={styles.btn_register}  onClick={handleOpen}>Login/Signup</button>
+           </Link>
+            </li> */}
+            {/* <li className="py-2 md:px-6" >
+            <Link href="" onClick={() => setNavbar(!navbar)}>
+            <button className={styles.btn_google}  onClick={handleOpen}>Job Seeker</button>
+           </Link>
+            </li> */}
           </ul>
 
           </div>
@@ -137,7 +146,7 @@ const Navbar = () => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style} className="sm:w-[912] w-2/5  ">
+        <Box sx={style} className="sm:w-[912] sm:w-2/5 w-3/5 ">
           <h2 className="text-center font-nunito text-[25px] mb-3 font-semibold">
           Create your Account
           </h2>
