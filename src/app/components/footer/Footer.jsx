@@ -29,10 +29,10 @@ const Footer = () => {
             </div>
             <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
               <div className="mx-10">
-                <h2 className="mb-8 text-[24px] font-medium text-gray-900 dark:text-white">
+                <h2 className="mb-8 text-[24px] font-medium text-white">
                   Company
                 </h2>
-                <ul classNameName="text-white text-base dark:text-gray-400 font-medium  font-nunito">
+                <ul classNameName="text-white text-base text-white font-medium  font-nunito">
                   <li className="mb-8 ">
                     <Link href="/" className="text-[#D1D0D0] hover:underline" >
                       About
@@ -51,7 +51,7 @@ const Footer = () => {
                 </ul>
               </div>
               <div className="mx-10">
-                <h2 className="mb-8 text-[24px] font-medium text-gray-900 dark:text-white">
+                <h2 className="mb-8 text-[24px] font-medium text-white">
                   Support
                 </h2>
                 <ul className="text-gray-600 text-base dark:text-gray-400 font-medium font-nunito">
@@ -68,7 +68,7 @@ const Footer = () => {
                 </ul>
               </div>
               <div className="mx-10">
-                <h2 className="mb-8 text-[24px] font-medium text-gray-900 dark:text-white">
+                <h2 className="mb-8 text-[24px] font-medium text-white">
                   Follow Us
                 </h2>
                 <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
