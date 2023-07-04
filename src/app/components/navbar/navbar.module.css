@@ -1,15 +1,34 @@
 
 .btn_google {
-    background-color: #B0CEBE;
-    width: 332px;
+    background-color: #0E713C;
+    width: 118px;
     height: 38px;
     top: 14px;
     left: 1041px;
     border-radius: 5px;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 17px;
     letter-spacing: 0em;
+    color: #ffffff;
+  
+}
 
-
+.btn_register {
+    background-color: #ffff;
+    width: 118px;
+    height: 38px;
+    top: 14px;
+    left: 1041px;
+    border: 2px solid #0E713C;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0em;
+    color: #0E713C;
+}
+.btn_register:hover{
+    background-color: #0E713C;
+    color: #ffffff;
 }

@@ -115,13 +115,13 @@ const Navbar = () => {
            </Link>
             </li>
             <li className="text-xl text-black py-2 md:px-6 text-base font-medium leading-5 text-center border-b-2 md:border-b-0 hover:text-green-950 md:hover:text-green-950">
-            <Link href="/" onClick={() => setNavbar(!navbar)}>
-            Join the Waitlist
+            <Link href="" onClick={() => setNavbar(!navbar)}>
+            <button className={styles.btn_register}  onClick={handleOpen}>Login/Signup</button>
            </Link>
             </li>
             <li className="py-2 md:px-6" >
-            <Link href="/" onClick={() => setNavbar(!navbar)}>
-            <button className={styles.btn_google} onClick={handleOpen}>Become a Google Expert & Start Earning</button>
+            <Link href="" onClick={() => setNavbar(!navbar)}>
+            <button className={styles.btn_google}  onClick={handleOpen}>Job Seeker</button>
            </Link>
             </li>
            
@@ -137,59 +137,62 @@ const Navbar = () => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style} className="sm:w-[912] w-3/5  ">
+        <Box sx={style} className="sm:w-[912] w-2/5  ">
           <h2 className="text-center font-nunito text-[25px] mb-3 font-semibold">
           Create your Account
           </h2>
           <hr />
-            <p className="text-center font-inter sm:text-[14px] text-[10px] mb-2 font-normal italic">
+            <p className="text-center font-[inter] sm:text-[14px] text-[10px] my-2 font-normal italic">
             Your personal information will not be displayed on SeeThru. All
             interactions are completely anonymous.
             </p>
          
-          <div className="grid  place-content-center">
+          <div className="grid  place-content-center my-5">
             <FormControl variant="standard" className='justify-center'>
-                <label shrink htmlFor="Work Email" className='font-normal my-1  text-[12px]   font-[inter] text-black'>
+                <label shrink htmlFor="Work Email" className='font-normal my-1  text-[13px]   font-[inter] text-black'>
                 Work Email
                 </label>
               <BootstrapInput id="Work Email" />
             </FormControl>
             <FormControl variant="standard" className="justify-center  ">
-            <label shrink htmlFor="First Name" className="font-normal my-1  text-[12px]   font-[inter] text-black">
+            <label shrink htmlFor="First Name" className="font-normal my-2  text-[13px]   font-[inter] text-black">
             First Name
                 </label>
               <BootstrapInput id="First Name" />
             </FormControl>
             <FormControl variant="standard" className="justify-center ">
-            <label shrink htmlFor="Last Name" className="font-normal my-1  text-[12px]   font-[inter] text-black">
+            <label shrink htmlFor="Last Name" className="font-normal my-2  text-[13px]   font-[inter] text-black">
             Last Name
                 </label>
               <BootstrapInput id="Last Name" />
             </FormControl>
-            <FormControl variant="standard" className="justify-center ">
-            <label shrink htmlFor="Phone Number" className="font-normal my-1  text-[12px]   font-[inter] text-black">
+         
+              <FormControl variant="standard" className="justify-center ">
+            <label shrink htmlFor="Phone Number" className="font-normal my-2  text-[13px]   font-[inter] text-black">
             Phone Number
                 </label>
               <BootstrapInput id="phonenumber" />
             </FormControl>
+         
+
             <FormControl variant="standard" className="justify-center ">
-            <label shrink htmlFor="Linkedin" className="font-normal my-1  text-[12px]   font-[inter] text-black">
+            <label shrink htmlFor="Linkedin" className="font-normal my-2  text-[13px]   font-[inter] text-black">
             Linkedin
                 </label>
               <BootstrapInput id="Linkedin" />
             </FormControl>
             <FormControl variant="standard" className="justify-center ">
-            <label shrink htmlFor="create_password" className="font-normal my-1  text-[12px]   font-[inter] text-black">
+            <label shrink htmlFor="create_password" className="font-normal my-2  text-[13px]   font-[inter] text-black">
             Create Password
                 </label>
               <BootstrapInput id="create_password" />
             </FormControl>
             <FormControlLabel control={<Checkbox defaultChecked color="success"/>}   className='sm:text-[14px] text-[10px]  font-normal italic' label="I acknowledge that the information I provided is accurate"/>
            
-            <p className="text-center font-inter sm:text-[14px] text-[10px]  my-2 font-normal italic">
+            <p className="text-center font-[inter] sm:text-[14px] text-[10px]  my-2 font-normal italic">
            By clicking below and creating an account, I agree to <span className='text-[#0E713C]'>SeeThru</span> Terms of Service and Privacy Policy
           </p>
-          <button  className="bg-[#0E713C] capitalize rounded-lg text-white opacity-75 h-12 hover:bg-[#086131]">
+          <button  className="bg-[#0E713C] capitalize rounded-lg mt-2 text-white opacity-75 h-12 hover:bg-[#086131]">
               Create Account
             </button>
           </div>

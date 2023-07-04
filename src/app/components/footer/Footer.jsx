@@ -129,13 +129,17 @@ const Footer = () => {
             </div>
           </div>
           <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-          <div className="sm:flex sm:items-center sm:justify-center">
-            <span className="text-[16px] text-gray-500 sm:text-center dark:text-gray-400">
+       
+          <div className="sm:flex sm:items-center sm:justify-center  sm:flex-row flex-col ">
+            
+            <div className="basis-4/4 sm:mb-0 mb-[-50px] ">
+            <span className="text-[16px] text-gray-500 sm:text-center   dark:text-gray-400">
               <Link href="" className="hover:underline text-[#D1D0D0] font-nunito">
                 Copyright
               </Link>
             </span>
-            <span className="mx-10">
+            </div>
+            <span className="mx-10 lg:visible invisible">
               <svg
                 width="7"
                 height="7"
@@ -145,13 +149,15 @@ const Footer = () => {
               >
                 <circle cx="3.5" cy="3.5" r="3.5" fill="white" />
               </svg>
-            </span>
-            <span className="text-[16px] text-gray-500 sm:text-center dark:text-gray-400">
+              </span>
+            <div className="basis-4/4 sm:mb-0 mb-[-50px] sm:ml-0 ml-2">
+            <span className="text-[16px] text-gray-500 sm:text-center  dark:text-gray-400">
               <Link href="" className="hover:underline text-[#D1D0D0] font-nunito">
                Policy
               </Link>
             </span>
-            <span className="mx-10">
+            </div>
+            <span className="mx-10 lg:visible invisible">
               <svg
                 width="7"
                 height="7"
@@ -161,13 +167,16 @@ const Footer = () => {
               >
                 <circle cx="3.5" cy="3.5" r="3.5" fill="white" />
               </svg>
-            </span>
+              </span>
+            <div className="basis-4/4 sm:mb-0 mb-[-50px] sm:ml-0 ml-2">
             <span className="text-[16px] text-gray-500 sm:text-center dark:text-gray-400">
               <Link href="" className="hover:underline text-[#D1D0D0] font-nunito">
                Terms
               </Link>
             </span>
-            <span className="mx-10">
+            </div>
+            
+            <span className="mx-10 lg:visible invisible">
               <svg
                 width="7"
                 height="7"
@@ -178,12 +187,16 @@ const Footer = () => {
                 <circle cx="3.5" cy="3.5" r="3.5" fill="white" />
               </svg>
             </span>
+            <div className="basis-4/4 sm:ml-0 ml-2">
             <span className="text-[16px] text-gray-500 sm:text-center dark:text-gray-400">
               <Link href="" className="hover:underline text-[#D1D0D0] font-nunito">
               Our Mission
               </Link>
             </span>
+            </div>
+           
           </div>
+        
         </div>
       </footer>
     </div>
