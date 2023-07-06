@@ -43,7 +43,9 @@ export default function Home() {
               </div>
               <div className="basis-4/4">
                 <button className="bg-[#0E713C]  text-white text-sm font-semibold  py-4 px-4 rounded-md my-3 mx-5">
+                  <Link href="/google_expert">
                   Find a Google Expert
+                  </Link>
                 </button>
               </div>
             </div>
